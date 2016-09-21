@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Számológép</title>
+	<meta charset="utf-8" /> 
+	<script type="text/javascript" src="jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="calculator.js"></script>
+  </head>
+  <body>
+  
+	  <!-- Mezők -->
+	  
+	  <input type="text" id="mezo1" value="" />
+	  <input type="text" id="mezoMuvelet" value="" />
+	  <input type="text" id="mezo2" value="" />
+	  =  
+	  <input type="text" id="mezoEredmeny" value="" />
+	  <br /><br />
+
+	  <!-- Gombok -->
+	  
+	  <button onclick="szam('1');">1</button>
+	  <button onclick="szam('2');">2</button>
+	  <button onclick="szam('3');">3</button><br />
+
+	  <button onclick="szam('4');">4</button>
+	  <button onclick="szam('5');">5</button>
+	  <button onclick="szam('6');">6</button><br />
+
+	  <button onclick="szam('7');">7</button>
+	  <button onclick="szam('8');">8</button>
+	  <button onclick="szam('9');">9</button><br />
+
+	  <button onclick="szam('0');">0</button>
+	  <button onclick="muvelet('+');">+</button>
+	  <button onclick="muvelet('-');">-</button><br />
+
+	  <button onclick="eredmeny();">=</button>
+	  <button onclick="muvelet('*');">*</button>
+	  <button onclick="muvelet('/');">/</button><br />
+  
+	  <button onclick="torolMind()";>Töröl</button>
+  </body>
+</html>
