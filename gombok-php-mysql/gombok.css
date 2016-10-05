@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html, body{
+  width: 100%;
+}
+
+#minden{
+  margin-top: 100px;
+  /* középre igazít */
+  margin-left: auto;
+  margin-right: auto;
+  width: 310px;
+}
+
+.gomb{
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  color: white;
+  font-size: 24px;
+}
+
+#piros-gomb{
+  background-color: red;
+}
+
+#zold-gomb{
+  background-color: green;
+}
+
+#kek-gomb{
+  background-color: blue;
+}
+
+.szamlalo, .koz{
+  display: table-cell;
+}
+
+.szamlalo{
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  
+  text-align: center;
+  vertical-align: middle;
+  
+  font-size: 36px;
+}
+
+#piros-szamlalo{
+  border: 1px solid red;
+  color: red;
+}
+
+#zold-szamlalo{
+  border: 1px solid green;
+  color: green;
+}
+
+#kek-szamlalo{
+  border: 1px solid blue;
+  color: blue;
+}
+
+#szamlalo-doboz{
+  margin-top:5px;
+}
+
+.koz{
+  width:5px;
+}
