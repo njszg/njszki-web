@@ -1,0 +1,26 @@
+0.
+
+Írjuk meg a src/first.php tartalmát úgy, hogy az összes teszt zöld legyen
+A teszteket böngészõbõl nyissuk meg itt: /tests/index.php
+Kövessük a hibaüzeneteket és korrigáljuk a kódot.
+Tipp: Érdemes elõször az összes tesztesetet kikommentelni és egyeként behozni õket a kódba.
+
+a-b-c.
+Az elsõ 3 feladat további leírás nélkül a tesztben található
+
+1. 
+A user beír egy szót, írjuk ki azt visszafele
+
+2.
+Osztályozó program: kérjük be, hogy hány pont volt a dolgozat.
+Majd ezek után kérjünk be jegyeket, és írjuk ki hány %-os és hanyas osztályzatot ér.
+(Az osztályzás százalékai tetszõlegesek)
+
+3.
+Érmefeldobás: írjuk egy programot, ami véletlenszerûen sorsol fejet és írást. Ezt addig folytassuk, amíg egymás után 10 fej lesz. Ekkor írjuk ki strukturált módon az összes feldobást és végül írjuk ki, hogy hány kísérletbõl jött össze a dolog.
+
+4.
+Kérjünk be, vagy generáljunk hõmérséklet adatokat (-30 és +50 közötti float vagy double). Határozzuk meg a minimum- és maximumértéket, valamint az átlagot.
+
+5.
+Írjuk ki egy szám prímtényezõs felbontását. pl. 60=2*2*3*5 vagy 210=2*3*5*7
