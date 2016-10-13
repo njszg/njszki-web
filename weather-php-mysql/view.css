@@ -1,0 +1,56 @@
+#main{
+  margin-left:30px;
+  margin-top:30px;
+}
+
+#whichPlace{
+  font-size:32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.day{
+  display: table-cell;
+  width: 100px;
+  border: 1px dotted green;
+}
+
+.dayName{
+  height: 30px;
+  text-align: center;
+  padding-top: 10px;
+  font-size:18px;
+  font-weight: bold;
+}
+
+.midday{
+  padding-top: 20px;
+  text-align: center;
+  font-size:24px;
+  color: red;
+}
+
+.midnight{
+  padding-top: 20px;
+  text-align: center;
+  font-size:24px;
+  color: blue;
+}
+
+.weather{
+  padding-bottom: 10px;
+  text-align: center;
+  font-size:18px;
+  color: green;
+}
+
+.weather-pic{
+  padding-top: 20px;
+  text-align: center;
+}
+
+.weather-pic > img{
+  width: 40px;
+  height: 40px;
+}
+
