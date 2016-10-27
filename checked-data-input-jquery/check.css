@@ -1,0 +1,14 @@
+.valid{
+	background-color: green;
+}
+
+.invalid{
+	background-color: red;
+}
+
+.feedback{
+	border-radius: 15px;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
