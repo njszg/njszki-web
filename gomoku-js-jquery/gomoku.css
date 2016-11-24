@@ -1,0 +1,29 @@
+#grid, #grid td{
+	border: 1px solid green;
+}
+
+#grid td{
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.X, .O{
+	font-size: 32px;
+}
+
+.X{
+	color: blue;
+	background-color: aqua;
+}
+
+.O{
+	color: red;
+	background-color: pink;
+}
+
+#new-game-button{
+	float: right;
+	font-size: 32px;
+}
