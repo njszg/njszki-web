@@ -1,0 +1,19 @@
+tr:nth-child(even){
+	background-color: yellow;
+}
+
+tr:nth-child(odd){
+	background-color: orange;
+}
+
+td{
+	padding: 10px 20px 10px 20px;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
