@@ -1,0 +1,23 @@
+.mezo{
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 72px;
+}
+
+body{
+	background-color: green;
+}
+
+.fekete{
+	background-color: gray;
+	color: black;
+}
+
+.feher{
+	background-color: white;
+	color: black;
+}

@@ -1,0 +1,5 @@
+https://en.wikipedia.org/wiki/Chess_symbols_in_Unicode
+https://en.wikipedia.org/wiki/Chess_notation
+https://en.wikipedia.org/wiki/Portable_Game_Notation
+https://github.com/ludovicofischer/mocha-chai-browser-demo/blob/master/tests.js
+http://chaijs.com/api/bdd/
