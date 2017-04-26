@@ -51,15 +51,15 @@ $(document).ready(function(){
 	
 	for(var i=0;i<8;i++){
 		var sor = $("<div></div>");
-		sor.addClass("sor");
+		//sor.addClass("sor");
 		tabla.append(sor);
 		
 		for(var j=0;j<8;j++){
 			var mezo = $("<div></div>");
 			mezo.addClass("mezo");
 			mezo.addClass((i+j)%2==0?"feher":"fekete");
-			mezo.attr("id", sornev[j]+(i+1));
-			//mezo.text(sornev[j]+(i+1));
+			//mezo.attr("id", sornev[j]+(i+1));
+			mezo.text(sornev[j]+(i+1));
 			sor.append(mezo);
 		}	
 	}

@@ -55,6 +55,127 @@ var sakk = {
 }
 
 function lep(sakk, lepes){
+	var honnan = lepes[0];
+	var hova = lepes[1];
+	
+	if(!mezoE(honnan)) return {kod: 1, hiba: 'Szabálytalan honnan mező.'};
+	if(!mezoE(hova)) return {kod: 2, hiba: 'Szabálytalan hova mező.'};
+	
+	var honnanOszlop = honnan[0];
+	var honnanSor = honnan[1];
+	var hovaOszlop = hova[0];
+	var hovaSor = hova[1];
+	var honnanFigura = sakk.mezok[honnanOszlop][honnanSor].figura;
+	
+	switch(honnanFigura){
+		
+		case 'bastya':
+			if(!(vizszintesE(honnan, hova) || fuggolegesE(honnan, hova))){
+				return {kod: 21, hiba: 'Szabálytalan bástya lépés.'};
+			}
+		break;	
+		
+		case 'futo':
+			if(!(atlosE(honnan, hova))){
+				return {kod: 31, hiba: 'Szabálytalan futó lépés.'};
+			}
+		break;	
+		
+		case 'vezer':
+			if(!(vizszintesE(honnan, hova) || fuggolegesE(honnan, hova) || atlosE(honnan, hova))){
+				return {kod: 41, hiba: 'Szabálytalan vezér lépés.'};
+			}
+		break;	
+		
+		case 'huszar':
+			if(!(ugrasE(honnan, hova))){
+				return {kod: 51, hiba: 'Szabálytalan huszár lépés.'};
+			}
+		break;	
+		
+		case 'kiraly':
+			if(!(szomszedosE(honnan, hova) || sancE(honnan, hova, sakk))){
+				return {kod: 61, hiba: 'Szabálytalan király lépés.'};
+			}
+			
+			if(sancE(honnan, hova, sakk)) {
+				// bástyát kéne léptetni
+				if(hova == "g1"){
+					var babu2 = sakk.mezok['h'][1];
+					sakk.mezok['f'][1] = babu2;
+					sakk.mezok['h'][1] = b('  ');
+				} else { // "c1"
+					var babu2 = sakk.mezok['a'][1];
+					sakk.mezok['d'][1] = babu2;
+					sakk.mezok['a'][1] = b('  ');
+				}
+			}
+		break;	
+
+	}
+	
+	var babu = sakk.mezok[honnanOszlop][honnanSor];
+	sakk.mezok[hovaOszlop][hovaSor] = babu;
+	sakk.mezok[honnanOszlop][honnanSor] = b('  ');
+	sakk.lep = 'sotet';
+	
+	return sakk;
+	
+	
+}
+
+var Oszlop = 0;
+var Sor = 1;
+
+function vizszintesE(honnan, hova){
+	return (honnan[Oszlop] == hova[Oszlop]);
+};
+
+function fuggolegesE(honnan, hova){
+	return (honnan[Sor] == hova[Sor]);
+};
+
+function atlosE(honnan, hova){
+	return (
+		Math.abs(ord(honnan[Oszlop])-ord(hova[Oszlop])) 
+		== Math.abs(honnan[Sor]-hova[Sor])
+	);
+};
+
+function ugrasE(honnan, hova){
+	var oszlopDiff = Math.abs(ord(honnan[Oszlop])-ord(hova[Oszlop])); 
+	var sorDiff	= Math.abs(honnan[Sor]-hova[Sor]);
+	return (
+		oszlopDiff*sorDiff == 2 &&
+		oszlopDiff+sorDiff == 3
+	);
+};
+
+function szomszedosE(honnan, hova){
+	var oszlopDiff = Math.abs(ord(honnan[Oszlop])-ord(hova[Oszlop])); 
+	var sorDiff	= Math.abs(honnan[Sor]-hova[Sor]);
+	return (
+		oszlopDiff < 2 &&
+		sorDiff < 2
+	);	
+};
+
+function sancE(honnan, hova, sakk){
+	// TODO sakkon át
+	// TODO léptek-e már
+	return (honnan == "e1" && (hova == "g1" || hova == "c1"));
+};
+
+function ord(str){
+	return str.charCodeAt(0);
+};
+
+function mezoE(mezo){
+	return ('a' <= mezo[0] && mezo[0] <= 'h' && '1' <= mezo[1] && mezo[1] <= '8');
+};
+
+/*
+function lep(sakk, lepes){
 	if('a' <= lepes[0] && lepes[0] <= 'h' && '1' <= lepes[1] && lepes[1] <= '8'){
 		if(sakk.lep == "vilagos"){
 			var oszlop = lepes[0];
@@ -117,3 +238,5 @@ function lep(sakk, lepes){
 		};
 	}
 }
+*/
+
